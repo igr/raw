@@ -1,5 +1,7 @@
 # Context Function Invocation
+
 Simple function body:
+
 ```kt
 fun makeReport(name: String, from: LocalDate) {
 	val data1 = foo(name)
@@ -8,11 +10,14 @@ fun makeReport(name: String, from: LocalDate) {
 	listOf(data1, data2)
 }
 ```
+
 ## Rules
-+ Function defines the context of the execution.
++ Function's body defines the context of the execution.
 + All values created are part of the context.
-+ Functions take implicit arguments from the context by matching type. We do not pass arguments to functions.
++ Functions take implicit arguments from the context by matching the type of the values. We do not pass explicit arguments to functions.
+
 ### Example
+
 ```kt
 fun makeReport(name: ReportName, from: ReportFromDate) {
 	val data1 = foo			// function call
@@ -21,8 +26,9 @@ fun makeReport(name: ReportName, from: ReportFromDate) {
 	makeList				// no common methods
 }
 ```
+
 ## Consequences
-+ Use of common types (`String`, `Int`) becomes discouraged. Instead, we should use domain types (type classes, etc.).
++ Use of common types (`String`, `Int`) becomes discouraged. Instead, we should use domain types (type classes...).
 + Overloading of the functions is disabled.
 + Function body becomes small once when all possible arguments exist simultaneously in the same context.
 + Possible issues with inheritance. The highest type in the hierarchy wins. On the good side, inheritance becomes less desirable.

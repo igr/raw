@@ -1,2 +1,2 @@
 # raw
-some raw thinking.
+unfiltered thinking.

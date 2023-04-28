@@ -1,4 +1,4 @@
-# Context Function Invocation
+# Context Programming
 
 Simple function body:
 
@@ -33,4 +33,4 @@ fun makeReport(name: ReportName, from: ReportFromDate) {
 + Function body becomes small once when all possible arguments exist simultaneously in the same context.
 + Possible issues with inheritance. The highest type in the hierarchy wins. On the good side, inheritance becomes less desirable.
 
-#idea
+#idea #todo
